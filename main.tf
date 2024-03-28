@@ -13,7 +13,7 @@ provider "kubernetes" {
 resource "kubernetes_deployment" "test" {
   metadata {
     name      = "nginx"
-    namespace = "flux-system"
+    namespace = "test"
   }
   spec {
     replicas = 2
@@ -43,7 +43,7 @@ resource "kubernetes_deployment" "test" {
 resource "kubernetes_service" "test" {
   metadata {
     name      = "nginx"
-    namespace = "flux-system"
+    namespace = "test"
   }
   spec {
     selector = {
