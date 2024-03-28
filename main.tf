@@ -8,17 +8,12 @@ terraform {
 }
 provider "kubernetes" {
   config_path = "~/.kube/config"
-  load_config_file = false
 }
-resource "kubernetes_namespace" "test" {
-  metadata {
-    name = "nginx"
-  }
-}
+
 resource "kubernetes_deployment" "test" {
   metadata {
     name      = "nginx"
-    namespace = kubernetes_namespace.test.metadata.0.name
+    namespace = test
   }
   spec {
     replicas = 2
@@ -48,7 +43,7 @@ resource "kubernetes_deployment" "test" {
 resource "kubernetes_service" "test" {
   metadata {
     name      = "nginx"
-    namespace = kubernetes_namespace.test.metadata.0.name
+    namespace = test
   }
   spec {
     selector = {
