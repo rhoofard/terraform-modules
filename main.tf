@@ -13,7 +13,7 @@ resource "kubernetes_deployment" "test" {
     namespace = "test"
   }
   spec {
-    replicas = 2
+    replicas = 1
     selector {
       match_labels = {
         app = "MyTestApp"
