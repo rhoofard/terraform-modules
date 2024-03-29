@@ -1,6 +1,7 @@
 variable "bloop" {
   type        = string
   description = "random input"
+  default     = "jibberish"
 }
 
 variable "bleep" {
