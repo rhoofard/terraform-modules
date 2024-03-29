@@ -17,6 +17,6 @@ resource "null_resource" "cluster" {
   }
 
   provisioner "local-exec" {
-    command = "ls"
+    command = "ls -al"
   }
 }
