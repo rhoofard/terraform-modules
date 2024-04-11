@@ -3,9 +3,3 @@ module "source_module" {
  bloop = "jibberis"
  bleep = 0
 }
-
-#module "source_module2" {
-# source = "git@github.com:rhoofard/sample-tf-module2.git?ref=v1.0.0"
-# bloop = "jibberis"
-# bleep = 0
-#}
