@@ -1,5 +1,5 @@
 module "source_module" {
- source = "github.com/rhoofard/sample-tf-module?ref=v1.6.0"
+ source = "github.com/rhoofard/sample-tf-module"
  bloop = "jibberis"
  bleep = 0
 }
